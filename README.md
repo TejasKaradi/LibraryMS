@@ -45,9 +45,6 @@ Ensure your project files follow a structured workspace pattern:
 │   └── register.html        # Registration entry page template
 └── .env                     # Backend configuration variables
 
-PORT=5000
-MONGODB_URI=mongodb://127.0.0.1:27017/librarydb
-JWT_SECRET=your_robust_fallback_token_string_phrase
 
 # Navigate to the backend workspace
 cd backend
