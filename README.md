@@ -78,3 +78,8 @@ npm start
 npm run dev
 
 # open your localhost:5000 in browser to see UI
+
+<img width="1600" height="898" alt="WhatsApp Image 2026-07-10 at 3 00 59 PM" src="https://github.com/user-attachments/assets/9765f748-dc3b-46ec-8b31-8486c9690238" />
+<img width="1600" height="866" alt="WhatsApp Image 2026-07-10 at 3 00 51 PM" src="https://github.com/user-attachments/assets/e93e9ed8-5d22-4b95-b29b-13d6879f6801" />
+
+
