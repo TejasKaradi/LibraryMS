@@ -1,63 +1,72 @@
-/***********************************************************************
- *
- * File Name : db.js
- *
- * Purpose:
- * --------
- * This file is responsible for connecting our Node.js application
- * to the MongoDB database using Mongoose.
- *
- * Why use a separate file?
- * ------------------------
- * Keeping the database connection in its own file makes the project
- * clean, reusable, and easy to maintain.
- *
- ***********************************************************************/
+# Library Management System
 
-// Import Mongoose
-// Mongoose is an ODM (Object Data Modeling) library.
-// It helps us interact with MongoDB using JavaScript objects.
-const mongoose = require("mongoose");
+A web application built with **Node.js, Express, and MongoDB** on the backend, paired with a dynamic vanilla JavaScript frontend interface. This system provides user authentication through **JSON Web Tokens (JWT)** and a complete **CRUD (Create, Read, Update, Delete)** engine for cataloging books securely.
 
+---
 
-// Create a function to connect to MongoDB
-const connectDB = async () => {
+## 🚀 Features
 
-    try {
+* **User Authentication**: Secure user login with server-backed verification. Authentic sessions grant unique JWT access tokens stored client-side.
+* **Protected Operations**: Automated route guards intercept unauthenticated traffic and force access validation before serving sensitive CRUD features.
+* **Book Inventory Tracker**: Complete management cycle covering standard catalog ingestion, batch listing retrievals, and targeting specific books for deletion.
+* **Persistent Sessions**: Automated configuration syncs matching state contexts via `localStorage` caches across page loads.
 
-        console.log("====================================");
-        console.log("Connecting to MongoDB...");
-        console.log("====================================");
+---
 
+## 🛠️ Tech Stack
 
-        // Connect to MongoDB using the connection string
-        // stored inside the .env file
-        await mongoose.connect(process.env.MONGO_URI);
+* **Frontend**: HTML5, Vanilla JavaScript (Fetch API), CSS3
+* **Backend**: Node.js, Express.js
+* **Database**: MongoDB (Object Mapping via Mongoose ODM architecture)
+* **Security**: Token-Based Bearer Authentication Architecture (JWT)
 
+---
 
-        console.log("====================================");
-        console.log("MongoDB Connected Successfully");
-        console.log("Database :", mongoose.connection.name);
-        console.log("Host     :", mongoose.connection.host);
-        console.log("====================================");
+## 📋 Prerequisites
 
-    }
+Before setting up the environment locally, make sure you have installed:
+* [Node.js](https://nodejs.org/) (v16.x or newer recommended)
+* [MongoDB](https://www.mongodb.com/) (Local instance running at `mongodb://127.0.0.1:27017` or a cloud-hosted MongoDB Atlas URI)
 
-    catch (error) {
+---
 
-        console.log("====================================");
-        console.log("MongoDB Connection Failed");
-        console.log(error.message);
-        console.log("====================================");
+## ⚙️ Getting Started
 
-        // Stop the server if database connection fails
-        process.exit(1);
+### 1. Structure the Project Files
+Ensure your project files follow a structured workspace pattern:
+```text
+├── backend/
+│   ├── index.js             # Express application root gateway
+│   ├── models/              # Mongoose database resource entities
+│   └── routes/              # Explicit route definitions
+├── frontend/
+│   ├── index.html           # Main administrative dashboard UI
+│   ├── login.html           # User gateway authentication template
+│   └── register.html        # Registration entry page template
+└── .env                     # Backend configuration variables
+```
+# Navigate to the backend workspace
+cd backend
 
-    }
+# Ingest necessary runtime node components
+npm install express mongoose jsonwebtoken bcryptjs dotenv cors
 
-};
+# Execute development cluster instances
+node index.js
 
+# Environment Setup
+Create a .env file in the root directory:
 
-// Export the function
-// This allows server.js to use connectDB()
-module.exports = connectDB;
+> Code snippet
+
+JWT_SECRET=your_super_secret_jwt_key_here
+
+# To run in production mode
+npm start
+
+# To run in development auto-reload mode
+npm run dev
+
+# open your localhost:5000 in browser to see UI
+
+### Owner  - wasim k
