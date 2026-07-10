@@ -2,6 +2,10 @@
 
 A web application built with **Node.js, Express, and MongoDB** on the backend, paired with a dynamic vanilla JavaScript frontend interface. This system provides user authentication through **JSON Web Tokens (JWT)** and a complete **CRUD (Create, Read, Update, Delete)** engine for cataloging books securely.
 
+<img width="1600" height="898" alt="WhatsApp Image 2026-07-10 at 3 00 59 PM" src="https://github.com/user-attachments/assets/9765f748-dc3b-46ec-8b31-8486c9690238" />
+<img width="1600" height="866" alt="WhatsApp Image 2026-07-10 at 3 00 51 PM" src="https://github.com/user-attachments/assets/e93e9ed8-5d22-4b95-b29b-13d6879f6801" />
+<img width="1919" height="910" alt="Screenshot 2026-07-10 151327" src="https://github.com/user-attachments/assets/3cf0f788-bec4-4619-988e-446c82469fff" />
+
 ---
 
 ## 🚀 Features
@@ -44,7 +48,7 @@ Ensure your project files follow a structured workspace pattern:
 │   ├── login.html           # User gateway authentication template
 │   └── register.html        # Registration entry page template
 └── .env                     # Backend configuration variables
-
+```
 
 # Navigate to the backend workspace
 cd backend
@@ -79,7 +83,6 @@ npm run dev
 
 # open your localhost:5000 in browser to see UI
 
-<img width="1600" height="898" alt="WhatsApp Image 2026-07-10 at 3 00 59 PM" src="https://github.com/user-attachments/assets/9765f748-dc3b-46ec-8b31-8486c9690238" />
-<img width="1600" height="866" alt="WhatsApp Image 2026-07-10 at 3 00 51 PM" src="https://github.com/user-attachments/assets/e93e9ed8-5d22-4b95-b29b-13d6879f6801" />
+
 
 
